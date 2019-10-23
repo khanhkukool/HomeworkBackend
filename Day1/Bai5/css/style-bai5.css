@@ -1,0 +1,23 @@
+@media (max-width: 767px){
+
+}
+
+.button-send{
+	background: #c3d008;
+    border-radius: 5px;
+}
+
+.form-send{
+	    margin: 10px 0;
+}
+
+.form-1{
+	max-width: 500px;
+    margin: 0 auto;
+    background: #f5f2f2;
+}
+
+.container-form-1{
+	max-width: 95%;
+    margin: 0 auto;
+}
