@@ -6,8 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Form</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
 </head>
 <body>
 <h3>Create Record</h3>
@@ -44,7 +44,7 @@
     <input type="date" name="birthday" value="birthday">
     <br>
     <button type="submit" name="submit" class="btn btn-primary">Save</button>
-    <a href="list.php"><button type="button" class="btn btn-light">Cancel</button></a>
+    <a href="index.php"><button type="button" class="btn btn-light">Cancel</button></a>
 </form>
 <h4 style="color: red">
     <?php

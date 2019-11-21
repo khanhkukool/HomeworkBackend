@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
         $isInsert = mysqli_query($connection, $sqlInsert);
         if ($isInsert) {
             $_SESSION['success'] = 'Them moi nhan vien thanh cong';
-            header("Location: list.php");
+            header("Location: index.php");
             exit();
         }
         else{

@@ -5,7 +5,7 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
     if (!is_numeric($id)) {
         $_SESSION['error'] = "Cần phải truyền id là số";
-        header("Location: list.php");
+        header("Location: index.php");
         exit();
     }
     $querySelect = "SELECT * FROM employees WHERE id = $id";
@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
 //        $isUpdateName = mysqli_query($connection, $updateName);
 //        if ($isUpdateName) {
 //            $_SESSION['success'] = 'Update name thành công';
-//            header("Location: list.php");
+//            header("Location: index.php");
 //            exit();
 //        }
 //    }
@@ -35,7 +35,7 @@ if (isset($_POST['submit'])) {
     $isUpdate = mysqli_query($connection, $queryUpdate);
     if ($isUpdate) {
         $_SESSION['success'] = 'Update thành công';
-        header("Location: list.php");
+        header("Location: index.php");
         exit();
     } else {
         //

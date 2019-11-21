@@ -15,3 +15,13 @@ if(!file_exists($pathController)){
     die("Trang ban tim khong ton tai");
 }
 require_once "$pathController";
+// Khởi tạo đối tượng từ file trên
+$classController = $controller."Controller";
+$object = new $classController();
+
+// Nếu action không tồn tại thì báo lỗi
+if(!method_exists($object, $action)){
+    die("Phuong thuc $action khong ton tai trong class $classController");
+}
+$object->$action();
+?>

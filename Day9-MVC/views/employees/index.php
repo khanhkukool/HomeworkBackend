@@ -6,8 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>List</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
 </head>
 <body>
 <div class="row">
@@ -15,14 +15,14 @@
         <h3>Employees List</h3>
     </div>
     <div class="col-md-6">
-        <a href="create.php">
+        <a href="index.php?controller=employee&action=create">
             <button type="button" class="btn btn-success">+ Add new employee</button>
         </a>
     </div>
 </div>
 <table border="1" cellspacing="0" cellpadding="5">
     <tr>
-        <td>#</td>
+        <td>id</td>
         <td>Name</td>
         <td>Description</td>
         <td>Salary</td>
@@ -51,7 +51,7 @@
                     case 1:
                         echo "Male";
                         break;
-                    case 0:
+                    case 2:
                         echo "Female";
                         break;
                 }
@@ -64,16 +64,14 @@
                 <?php echo $employee['created_at']; ?>
             </td>
             <td>
-                <a href="view.php?id=<?php echo $employee['id'] ?>">
-                    <i class="fas fa-eye"></i>
-                </a>
-                <a href="update.php?id=<?php echo $employee['id'] ?>">
-                    <i class="fas fa-pen"></i>
-                </a>
-                <a onclick="return confirm('Bạn có chắc chắn muốn xóa không?')"
-                   href="delete.php?id=<?php echo $employee['id'] ?>">
-                    <i class="fas fa-trash-alt"></i>
-                </a>
+                <?php
+                    $urlView = "index.php?controller=employee&action=view&id=".$employee['id'];
+                    $urlUpdate = "index.php?controller=employee&action=update&id=".$employee['id'];
+                    $urlDelete = "index.php?controller=employee&action=delete&id=".$employee['id'];
+                ?>
+                <a href="<?php echo $urlView ?>"><i class="fas fa-eye"></i></a>
+                <a href="<?php echo $urlUpdate ?>"><i class="fas fa-pen"></i></a>
+                <a onclick="return confirm('Bạn có chắc chắn muốn xóa không?')" href="<?php echo $urlDelete ?>"><i class="fas fa-trash-alt"></i></a>
             </td>
         </tr>
     <?php endforeach; ?>
