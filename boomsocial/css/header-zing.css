@@ -4986,8 +4986,7 @@ body {
     text-indent: -9999px;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url("https://static-znews.zadn.vn/images/logo-zing-v6.svg");
-    position: relative
+    position: relative;
 }
 
 #boom-header .logo span {

@@ -24,7 +24,7 @@
 <header id="boom-header" class="scrollfixed">
     <div class="page-wrapper">
         <h1 class="logo">
-            <a href="/" title="Zing News">Zing.vn <span>Tri thức trực tuyến</span></a>
+            <img src="images/logo.png">
         </h1>
         <nav class="category-menu">
             <ul>
@@ -149,10 +149,11 @@
                                             <div class="comment hasDelLink">
                                                 <div class="activity_text">
                                                     <a href="/users/view/6" class="moocore_tooltip_link"
-                                                       data-item_type="user" data-item_id="6"><b>Đức Khánh</b></a></div>
+                                                       data-item_type="user" data-item_id="6"><b>Đức Khánh</b>
+                                                    </a>
+                                                </div>
                                                 <div class="feed_time">
-                                                    <a href="/users/view/6/activity_id:648" class="date"> 18 giây
-                                                        Trước</a>
+                                                    <a href="/users/view/6/activity_id:648" class="date"> 18 giây Trước</a>
                                                     <span class="dropdown">
                             <a id="permission_648" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
                                class="tip" href="javascript:void(0);" original-title="Chia sẻ với: Mọi người"> <i
