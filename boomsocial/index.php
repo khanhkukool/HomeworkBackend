@@ -19,6 +19,9 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/header-zing.css"
     <!--===========END STYLE====================-->
+    <!--===========SCRIPT====================-->
+<!--    <script type="text/javascript" src="js/provinceVi.js"></script>-->
+    <!--===========END SCRIPT====================-->
 </head>
 <body class="default-body" id="page_home-index">
 <header id="boom-header" class="scrollfixed">
@@ -38,15 +41,17 @@
         </nav>
         <div class="toolbox">
             <div class="searchform-wrap">
-                <form name="search" id="searchbox" class="znewsSearch" target="_blank">
+                <form name="search" id="searchbox" class="pageSearch">
                     <input type="text" name="s" id="search_keyword" placeholder="Nhập nội dung cần tìm...">
-                    <button type="submit" id="search_button"><span class="znews-icon ti-search"></span></button>
+                    <button type="submit" id="search_button">
+                        <span class="znews-icon ti-search"></span>
+                    </button>
                 </form>
             </div>
             <a href="#" class="notification">
                 <span class="znews-icon ti-user"></span>
             </a>
-            <a class="version" href="javascript:switchMobile();">M</a>
+            <a class="version" href="#">M</a>
         </div>
     </div>
 </header>
@@ -76,13 +81,15 @@
                     <div class="clear"></div>
                     <ul class="list2 block-body menu_top_list">
                         <li>
-                            <a id="notifications" data-url="/notifications/ajax_show/home" rel="home-content" href="/home/index/tab:notifications">
+                            <a id="notifications" data-url="/notifications/ajax_show/home" rel="home-content"
+                               href="/home/index/tab:notifications">
                                 <i class="material-icons">notifications</i> Thông báo
                                 <span id="notification_count" class="badge_counter">0</span>
                             </a>
                         </li>
                         <li>
-                            <a id="my-photos" data-url="/albums/browse/home" rel="home-content" href="/home/index/tab:my-photos">
+                            <a id="my-photos" data-url="/albums/browse/home" rel="home-content"
+                               href="/home/index/tab:my-photos">
                                 <i class="material-icons">photo</i> Khách hàng của tôi
                                 <spanlist6 comment_wrapper class="badge_counter">6</span>
                             </a>
@@ -95,30 +102,253 @@
             <div class="p_l_7 home_content_feed">
                 <div id="home-content">
                     <div class="p_l_7 check-home">
-                        <div class="mo_breadcrumb">
-                            <h1>Có gì mới?</h1>
-                        </div>
                         <div class="home_user">
                             <div id="status_box" class="statusHome">
+                                <div class="mo_breadcrumb">
+                                    <h1>Có gì mới?</h1>
+                                </div>
                                 <form id="wallForm">
                                     <div class="form-feed-holder">
                                         <div class="post-status">
-                                       <textarea name="messageText" placeholder="Nội dung" id="message"></textarea>
+                                            <textarea name="messageText" placeholder="Nội dung" id="message"></textarea>
                                             <div id="message-emoji" class="emoji-toggle">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="stt-action">
                                         <form>
-                                            <input type="text" placeholder="Nhập email hoặc số điện thoại">
-                                            <input type="text" placeholder="Nhập địa chỉ">
+                                            <input type="text" placeholder="Email">
+                                            <input type="text" placeholder="số điện thoại">
+                                            <div class="D2pYo" data-reactid="189"><label for="province"
+                                                                                         data-reactid="190"><span
+                                                            data-reactid="191">Địa chỉ</span><span
+                                                            style="color:red;margin-left:2px;"
+                                                            data-reactid="192">*</span></label>
+                                                <div class="D2pYo" data-reactid="193">
+                                                    <div class="_1Nm_E" data-reactid="194">
+                                                        <div data-reactid="195"><select name="province" class="_2K5yV"
+                                                                                        data-reactid="196">
+                                                                <option selected="" value="" data-reactid="197">Tỉnh/
+                                                                    Thành phố
+                                                                </option>
+                                                                <option value="59cdc41a9d2a1700271c2b09"
+                                                                        data-reactid="198">TP Hà Nội
+                                                                </option>
+                                                                <option value="59cdc41a9d2a1700271c2b0a"
+                                                                        data-reactid="199">TP Hồ Chí
+                                                                    Minh
+                                                                </option>
+                                                                <option value="59cdc41a9d2a1700271c2b0b"
+                                                                        data-reactid="200">An Giang
+                                                                </option>
+                                                                <option value="59cdc41a9d2a1700271c2b0c"
+                                                                        data-reactid="201">Bà Rịa -
+                                                                    Vũng Tàu
+                                                                </option>
+                                                                <option value="59cdc41a9d2a1700271c2b0d"
+                                                                        data-reactid="202">Bắc Kạn
+                                                                </option>
+                                                                <option value="59cdc41a9d2a1700271c2b0e"
+                                                                        data-reactid="203">Bắc Giang
+                                                                </option>
+                                                                <option value="59cdc41a9d2a1700271c2b0f"
+                                                                        data-reactid="204">Bạc Liêu
+                                                                </option>
+                                                                <option value="59cdc41a9d2a1700271c2b10"
+                                                                        data-reactid="205">Bắc Ninh
+                                                                </option>
+                                                                <option value="59cdc41a9d2a1700271c2b11"
+                                                                        data-reactid="206">Bến Tre
+                                                                </option>
+                                                                <option value="59cdc41a9d2a1700271c2b12"
+                                                                        data-reactid="207">Bình Định
+                                                                </option>
+                                                                <option value="59cdc41a9d2a1700271c2b13"
+                                                                        data-reactid="208">Bình Dương
+                                                                </option>
+                                                                <option value="59cdc41a9d2a1700271c2b14"
+                                                                        data-reactid="209">Bình Phước
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b15"
+                                                                        data-reactid="210">Bình Thuận
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b16"
+                                                                        data-reactid="211">Cà Mau
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b17"
+                                                                        data-reactid="212">TP Cần Thơ
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b18"
+                                                                        data-reactid="213">Cao Bằng
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b19"
+                                                                        data-reactid="214">TP Đà Nẵng
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b1a"
+                                                                        data-reactid="215">Đăk Lăk
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b1b"
+                                                                        data-reactid="216">Điện Biên
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b1c"
+                                                                        data-reactid="217">Đồng Nai
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b1d"
+                                                                        data-reactid="218">Đồng Tháp
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b1e"
+                                                                        data-reactid="219">Gia Lai
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b1f"
+                                                                        data-reactid="220">Hà Giang
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b20"
+                                                                        data-reactid="221">Hà Nam
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b21"
+                                                                        data-reactid="222">Hà Tĩnh
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b22"
+                                                                        data-reactid="223">Hải Dương
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b23"
+                                                                        data-reactid="224">TP Hải
+                                                                    Phòng
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b24"
+                                                                        data-reactid="225">Hòa Bình
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b25"
+                                                                        data-reactid="226">Hưng Yên
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b26"
+                                                                        data-reactid="227">Khánh Hòa
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b27"
+                                                                        data-reactid="228">Kiên Giang
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b28"
+                                                                        data-reactid="229">Kon Tum
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b29"
+                                                                        data-reactid="230">Lai Châu
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b2a"
+                                                                        data-reactid="231">Lâm Đồng
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b2b"
+                                                                        data-reactid="232">Lạng Sơn
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b2c"
+                                                                        data-reactid="233">Lào Cai
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b2d"
+                                                                        data-reactid="234">Long An
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b2e"
+                                                                        data-reactid="235">Nam Định
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b2f"
+                                                                        data-reactid="236">Nghệ An
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b30"
+                                                                        data-reactid="237">Ninh Bình
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b31"
+                                                                        data-reactid="238">Ninh Thuận
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b32"
+                                                                        data-reactid="239">Phú Thọ
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b33"
+                                                                        data-reactid="240">Phú Yên
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b34"
+                                                                        data-reactid="241">Quảng Bình
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b35"
+                                                                        data-reactid="242">Quảng Nam
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b36"
+                                                                        data-reactid="243">Quảng Ngãi
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b37"
+                                                                        data-reactid="244">Quảng Ninh
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b38"
+                                                                        data-reactid="245">Quảng Trị
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b39"
+                                                                        data-reactid="246">Sóc Trăng
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b3a"
+                                                                        data-reactid="247">Sơn La
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b3b"
+                                                                        data-reactid="248">Tây Ninh
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b3c"
+                                                                        data-reactid="249">Thái Bình
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b3d"
+                                                                        data-reactid="250">Thái
+                                                                    Nguyên
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b3e"
+                                                                        data-reactid="251">Thanh Hóa
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b3f"
+                                                                        data-reactid="252">Thừa Thiên
+                                                                    Huế
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b40"
+                                                                        data-reactid="253">Tiền Giang
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b41"
+                                                                        data-reactid="254">Trà Vinh
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b42"
+                                                                        data-reactid="255">Tuyên
+                                                                    Quang
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b43"
+                                                                        data-reactid="256">Vĩnh Long
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b44"
+                                                                        data-reactid="257">Vĩnh Phúc
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b45"
+                                                                        data-reactid="258">Yên Bái
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b46"
+                                                                        data-reactid="259">Đắc Nông
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b47"
+                                                                        data-reactid="260">Hậu Giang
+                                                                </option>
+                                                                <option value="59cdc41b9d2a1700271c2b48"
+                                                                        data-reactid="261">Lưu học sinh
+                                                                    đang ở nước ngoài
+                                                                </option>
+                                                            </select></div>
+                                                    </div>
+                                                    <div class="_1Nm_E" data-reactid="262">
+                                                        <div data-reactid="263"><select name="district" class="_2K5yV"
+                                                                                        data-reactid="264">
+                                                                <option selected="" value="" data-reactid="265">Quận/
+                                                                    Huyện
+                                                                </option>
+                                                            </select></div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </form>
-                                        <div style="width: 40px;" data-toggle="tooltip" title="Thêm hình ảnh vào bài viết của bạn" id="select-2"></div>
+                                        <div title="Thêm hình ảnh vào bài viết của bạn" id="select-2"></div>
                                         <!-- Hook for plugin -->
                                         <div id="commentButton_0" class="post-stt-btn">
                                             <div class="wall-post-action">
-                                                <a href="javascript:void(0)" class="btn btn-action"
-                                                   style="margin-bottom:3px" id="status_btn"> Chia sẻ</a>
+                                                <a href="" class="btn btn-action"
+                                                   style="margin-bottom:3px" id="status_btn">Chia sẻ</a>
                                             </div>
                                         </div>
                                     </div>
@@ -126,11 +356,6 @@
                                 <div class="clear"></div>
                             </div>
                             <ul class="list6 comment_wrapper" id="list-content">
-                                <style>
-                                    #list-content li {
-                                        position: relative;
-                                    }
-                                </style>
                                 <li id="activity_648">
                                     <div class="feed_main_info">
                                         <div class="dropdown edit-post-icon">
@@ -153,7 +378,8 @@
                                                     </a>
                                                 </div>
                                                 <div class="feed_time">
-                                                    <a href="/users/view/6/activity_id:648" class="date"> 18 giây Trước</a>
+                                                    <a href="/users/view/6/activity_id:648" class="date"> 18 giây
+                                                        Trước</a>
                                                     <span class="dropdown">
                             <a id="permission_648" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
                                class="tip" href="javascript:void(0);" original-title="Chia sẻ với: Mọi người"> <i
@@ -209,7 +435,8 @@
                                                 <i class='material-icons'>comment</i>&nbsp;Bình luận
                                             </a>
                                             &nbsp;
-                                            <a href="javascript:void(0)" data-id="648" data-type="activity" data-status="1" id="activity_l_648" class="comment-thumb likeActivity ">
+                                            <a href="javascript:void(0)" data-id="648" data-type="activity"
+                                               data-status="1" id="activity_l_648" class="comment-thumb likeActivity ">
                                                 <i class="material-icons">thumb_up</i>
                                             </a>
                                             <a id='' href='/likes/ajax_show/activity/648' data-target='#themeModal'
@@ -219,7 +446,8 @@
                                                         id="activity_like_648">0
                                                 </span>
                                             </a>
-                                            <a href="javascript:void(0)" data-id="648" data-type="activity" data-status="0" id="activity_d_648" class="comment-thumb likeActivity ">
+                                            <a href="javascript:void(0)" data-id="648" data-type="activity"
+                                               data-status="0" id="activity_d_648" class="comment-thumb likeActivity ">
                                                 <i class="material-icons">thumb_down</i>
                                             </a>
 
@@ -243,8 +471,8 @@
                                                    data-item_id="6" data-item_type="user"
                                                    class="moocore_tooltip_link">
                                                     <img src="http://yaloo.me/uploads/users/avatar/6/50_square_e79cbba76054e014de73822cfeab2b04.jpg?1741"
-                                                            class="user_avatar_small img_wrapper2" alt="Đức Khánh"
-                                                            title=""/>
+                                                         class="user_avatar_small img_wrapper2" alt="Đức Khánh"
+                                                         title=""/>
                                                 </a>
                                                 <div class="comment">
                                                     <textarea name="data[commentForm_648]"
@@ -436,7 +664,7 @@
             </div>
             <div class="bar-content">
                 <div class="box2 suggestion_block">
-                    <h3>Profile boomer</h3>
+                    <h3>Top boomer</h3>
                     <div class="box_content">
                         <ul class="list6">
                             <li>
